@@ -17,8 +17,8 @@ Tags suggestions :
   "AutoTag_ManagedBy": "Site Reliability Engineering"
 }
 ```
-```
     - Security Tags suggestions:
+```
 {
   "Confidentiality" : ""
   "Compliance" : ""
@@ -80,7 +80,15 @@ Tags suggestions :
 ## Resources 
 
 - S3 bucket for lambda code
-- s3 b
+- S3 bucket to store Json file contains Tag information 
+
+
+## Diagram
+### Aws Tag Enforcement
+
+
+### Enforce Tagging accross multi Account
+![alt text](https://github.com/Eslamanwar/aws-tag-enforcement/blob/master/images/Auto-Tag-Diagram-multi-Account.png?raw=true)
 
 ## Referances
 
