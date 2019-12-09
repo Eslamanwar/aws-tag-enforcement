@@ -80,8 +80,10 @@ Tags suggestions :
 ## Resources 
 
 - S3 bucket for lambda code
-- S3 bucket to store Json file contains Tag information 
-
+- S3 bucket to store Json file contains Tag information /Or Using DynamoDB
+- Amazon CloudWatch
+- Lambda Function
+- IAM Role for the tag enforcement and sync Lambda functions.
 
 ## Diagram
 ### Aws Tag Enforcement
