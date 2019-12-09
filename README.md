@@ -90,14 +90,17 @@ Tags suggestions :
 ![alt text](https://github.com/Eslamanwar/aws-tag-enforcement/blob/master/images/Auto-Tag-Diagram.png?raw=true)
    
 
-   
+
 ### Enforce Tagging accross multi Account
 ![alt text](https://github.com/Eslamanwar/aws-tag-enforcement/blob/master/images/Auto-Tag-Diagram-multi-Account.png?raw=true)
 
 ## Referances
 
-
-
+- https://aws.amazon.com/ar/blogs/apn/enforce-centralized-tag-compliance-using-aws-service-catalog-amazon-dynamodb-aws-lambda-and-amazon-cloudwatch-events/
+- https://aws.amazon.com/ar/blogs/mt/monitor-tag-changes-on-aws-resources-with-serverless-workflows-and-amazon-cloudwatch-events/
+- https://aws.amazon.com/ar/blogs/security/how-to-automatically-tag-amazon-ec2-resources-in-response-to-api-events/
+- https://github.com/aws-samples/aws-tag-enforcement-service-catalog
+- 
 
 
 
