@@ -87,7 +87,7 @@ Tags suggestions :
 
 ## Diagram
 ### Aws Tag Enforcement
-![alt text](https://github.com/Eslamanwar/aws-tag-enforcement/blob/master/images/Auto-Tag-Diagram.png?raw=true)
+![alt text](https://github.com/Eslamanwar/aws-tag-enforcement/blob/master/images/DiagramV1.png?raw=true)
    
 
 
