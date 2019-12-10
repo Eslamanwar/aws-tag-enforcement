@@ -92,7 +92,7 @@ Tags suggestions :
 
 
 ### Enforce Tagging accross multi Account
-![alt text](https://github.com/Eslamanwar/aws-tag-enforcement/blob/master/images/Auto-Tag-Diagram-multi-Account.png?raw=true)
+![alt text](https://github.com/Eslamanwar/aws-tag-enforcement/blob/master/images/DiagramV1.png?raw=true)
 
 ## Referances
 
