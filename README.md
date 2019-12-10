@@ -59,7 +59,7 @@ Tags suggestions :
 
 - who will decide if this repo sensitivity is high or low as it will be automated? 
     - Is it will be static tagging on all repositories
-    - or based upon CloudTrail event fields like user who created the repo
+    - or based upon CloudTrail event fields like user who created the repo ,we can use this feature to restrict policy like delete the repo that other user created
 
 
 
@@ -100,8 +100,6 @@ Tags suggestions :
 - https://aws.amazon.com/ar/blogs/mt/monitor-tag-changes-on-aws-resources-with-serverless-workflows-and-amazon-cloudwatch-events/
 - https://aws.amazon.com/ar/blogs/security/how-to-automatically-tag-amazon-ec2-resources-in-response-to-api-events/
 - https://github.com/aws-samples/aws-tag-enforcement-service-catalog
-- 
-
 
 
 
