@@ -1,5 +1,24 @@
 # aws-tag-enforcement
 
+## How it works
+1. Enable CloudTrail in the current Region or all Regions you work with ,as it will trigger the Cloudwatch
+2. Case (1) --> If you insert new Tag Json file in the specific S3 Bucket , it will trigger the Cloudwatch Event that Run the Lambda function which Auto tag all ECR repos that exist in all Regions
+3. case (2) --> if you Create new ECR repo , it will trigger the Cloudwatch Event that run the Lambda that will force apply tags to this new ECR Repo
+3. Main CloudFormation Stack 
+    - Lambda Function 1 --> for new created ECR repo 
+    - Lambda Function 2 --> when put new Tag Json file , to apply to already existing ECR repos
+    - IAM Role to give Lambda access permissions on other resources like 'ECR'
+
+## Diagram
+### Aws Tag Enforcement
+![alt text](https://github.com/Eslamanwar/aws-tag-enforcement/blob/master/images/DiagramV1.png?raw=true)
+
+
+## Prerequisites
+
+- CloudTrail must be Enabled in the specific region
+
+
 ## Architecture design questions
 
 - What AWS ECR service can we attach Tag?
@@ -63,32 +82,9 @@ Tags suggestions :
 
 
 
-## How it works
-1. Enable CloudTrail in the current Region ,as it will trigger the Cloudwatch
-2. Cloudwatch will Trigger a Lambda function anytime a new ECR repository resource is created
-3. Main CloudFormation Stack 
-    - Lambda Function
-    - IAM Role for the tag enforcement and sync Lambda functions.
 
 
-## Prerequisites
 
-- CloudTrail must be Enabled in the specific region
-
-## Installation
-
-## Resources 
-
-- S3 bucket for lambda code
-- S3 bucket to store Json file contains Tag information /Or Using DynamoDB
-- Amazon CloudWatch
-- Lambda Function
-- IAM Role for the tag enforcement and sync Lambda functions.
-
-## Diagram
-### Aws Tag Enforcement
-![alt text](https://github.com/Eslamanwar/aws-tag-enforcement/blob/master/images/DiagramV1.png?raw=true)
-   
 
 
 ### Enforce Tagging accross multi Account
