@@ -4,9 +4,11 @@
 1. Enable CloudTrail in the current Region or all Regions you work with ,as it will trigger the Cloudwatch
 2. Case (1) --> If you insert new Tag Json file in the specific S3 Bucket , it will trigger the Cloudwatch Event that Run the Lambda function which Auto tag all ECR repos that exist in all Regions
 3. case (2) --> if you Create new ECR repo , it will trigger the Cloudwatch Event that run the Lambda that will force apply tags to this new ECR Repo
-3. Main CloudFormation Stack 
+4. case (3) --> if an image is pushed to any repo , it will trigger the Cloudwatch Event that run the Lambda that will query the docker image labels and verify if they match the expected AWS tags
+5. Main CloudFormation Stack 
     - Lambda Function 1 --> for new created ECR repo 
     - Lambda Function 2 --> when put new Tag Json file , to apply to already existing ECR repos
+    - Lambda Function 3 --> when docker image pushed , compare the image labels with the repo AWS tag
     - IAM Role to give Lambda access permissions on other resources like 'ECR'
 
 ## Diagram
@@ -17,6 +19,26 @@
 ## Prerequisites
 
 - CloudTrail must be Enabled in the specific region
+
+
+
+
+
+
+## How to put/get image labels
+
+Dockerfile:
+-----------
+FROM amazonlinux:latest
+LABEL version="1.0" maintainer="Eslam Mohammed <eslam.anwar96@gmail.com>"
+
+
+url=$(aws ecr get-download-url-for-layer --registry-id 011974135172 --repository-name amazonlinux --layer-digest sha256:95481a8e9b7fcae0f5bea89d5b35ec1029303910033fa1a20f083970ec97ee28 | jq -r .downloadUrl)
+
+curl -s --connect-timeout 5 $url | jq .config.Labels
+
+
+
 
 
 ## Architecture design questions
