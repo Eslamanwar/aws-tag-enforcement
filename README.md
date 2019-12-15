@@ -27,8 +27,9 @@
 
 ## How to put/get image labels
 
-Dockerfile:
------------
+### Dockerfile:
+
+```
 FROM amazonlinux:latest
 LABEL version="1.0" maintainer="Eslam Mohammed <eslam.anwar96@gmail.com>"
 
@@ -36,7 +37,7 @@ LABEL version="1.0" maintainer="Eslam Mohammed <eslam.anwar96@gmail.com>"
 url=$(aws ecr get-download-url-for-layer --registry-id 011974135172 --repository-name amazonlinux --layer-digest sha256:95481a8e9b7fcae0f5bea89d5b35ec1029303910033fa1a20f083970ec97ee28 | jq -r .downloadUrl)
 
 curl -s --connect-timeout 5 $url | jq .config.Labels
-
+```
 
 
 
