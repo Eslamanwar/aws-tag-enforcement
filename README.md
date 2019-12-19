@@ -21,8 +21,16 @@
 # case 3 lambda
 - This function will get the Docker image Labels and AWS repo tags
 - it must have Role permission on ECR to read AWS Repositories tags
+- To deploy cd ./lambda_case3_compare_tags
+
+```
+sam package --template-file sam.yaml --s3-bucket mybucket-323232 --output-template-file packaged.yaml
+sam deploy --template-file ./packaged.yaml --stack-name mystack --capabilities CAPABILITY_IAM
+```
+
 ![alt text](https://github.com/Eslamanwar/aws-tag-enforcement/blob/master/images/tag.png?raw=true)
 ![alt text](https://github.com/Eslamanwar/aws-tag-enforcement/blob/master/images/screenshot.png?raw=true)
+
 
 
 ## Prerequisites
