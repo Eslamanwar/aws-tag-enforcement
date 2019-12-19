@@ -1,6 +1,6 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: 'AWS::Serverless-2016-10-31'
-Description: An AWS Serverless Specification template describing your function.
+Description: This function will compare the Docker image Labels and AWS repo tags
 Resources:
   tag:
     Type: 'AWS::Serverless::Function'
