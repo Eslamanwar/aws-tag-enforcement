@@ -19,7 +19,7 @@
 
 
 # case 3 lambda
-- This function will compare the Docker image Labels and AWS repo tags
+- This function will get the Docker image Labels and AWS repo tags
 - it must have Role permission on ECR to read AWS Repositories tags
 ![alt text](https://github.com/Eslamanwar/aws-tag-enforcement/blob/master/images/tag.png?raw=true)
 ![alt text](https://github.com/Eslamanwar/aws-tag-enforcement/blob/master/images/screenshot.png?raw=true)
