@@ -16,10 +16,18 @@
 ![alt text](https://github.com/Eslamanwar/aws-tag-enforcement/blob/master/images/Auto-Tag-Diagram.png?raw=true)
 
 
+
+
+# case 3 lambda
+- This function will compare the Docker image Labels and AWS repo tags
+- it must have Role permission on ECR to read AWS Repositories tags
+![alt text](https://github.com/Eslamanwar/aws-tag-enforcement/blob/master/images/tag.png?raw=true)
+![alt text](https://github.com/Eslamanwar/aws-tag-enforcement/blob/master/images/screenshot.png?raw=true)
+
+
 ## Prerequisites
 
 - CloudTrail must be Enabled in the specific region
-
 
 
 
